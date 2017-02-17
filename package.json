@@ -1,0 +1,19 @@
+{
+  "name": "nestia-web",
+  "version": "1.0.0",
+  "description": "Nestia Web Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ds3783/nestia-web.git"
+  },
+  "author": "Ds.3783",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ds3783/nestia-web/issues"
+  },
+  "homepage": "https://github.com/ds3783/nestia-web#readme"
+}
