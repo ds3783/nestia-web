@@ -71,7 +71,7 @@ var Monitor = module.exports = {
                 Monitor.recordVal('all_req_time', timeSpan2);
                 Monitor.recordCnt('all_req_cnt', 1);
                 if (options['mon404']) {
-                    if (res.status == 404) {
+                    if (res.status == 404 || res.getHeader('X-Error') == 404) {
                         Monitor.recordCnt('404_req_cnt', 1);
                     }
                 }
