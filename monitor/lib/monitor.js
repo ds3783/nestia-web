@@ -36,8 +36,19 @@ module.exports = {
     init: function () {
         setInterval(function () {
             exportRecords();
+            var cntKeys = Object.keys(cntObj);
+            var valKeys = Object.keys(valObj);
             cntObj = {};
             valObj = {};
+            var i;
+            for (i = 0; i < cntKeys.length; i++) {
+                cntObj[cntKeys[i]] = 0;
+            }
+            for (i = 0; i < valKeys.length; i++) {
+                valObj[valKeys[i]] = {cnt: 0, sum: 0};
+            }
+            cntKeys = null;
+            valKeys = null;
         }, 60000);
     },
     recordCnt: function (code, cnt) {
