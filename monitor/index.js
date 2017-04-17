@@ -51,13 +51,14 @@ var Monitor = module.exports = {
         suffix = options.suffix || '';
         prefix = prefix ? prefix + '_' : '';
         suffix = suffix ? suffix + '_' : '';
+        monitorPath = options.monitorPath || monitorPath;
 
 
         var app = options.app;
         app && app.use(function (req, res, next) {
             if (
                 /healthcheck.html/.test(req.path)
-                || monitorPath == req.path
+                || monitorPath === req.path
             ) {
                 //ignore healthckeck and monitor data crawler
                 next();

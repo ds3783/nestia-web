@@ -4,8 +4,10 @@
 
 
 var monitor = require('./monitor');
+var requestFilter = require('./requestFilter');
 
 
 module.exports = {
-    monitor: monitor
+    monitor: monitor,
+    requestFilter: requestFilter
 };

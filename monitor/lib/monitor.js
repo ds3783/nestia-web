@@ -56,8 +56,8 @@ module.exports = {
     },
     recordVal: function (code, val) {
         valObj[code] = valObj[code] || {cnt: 0, sum: 0};
-        valObj[code]['cnt']++;
-        valObj[code]['sum'] += val || 0;
+        valObj[code]['Count']++;
+        valObj[code]['Sum'] += val || 0;
     },
     getExportData: function () {
         return lastResult;
